@@ -187,7 +187,7 @@ function getCarInfoById(inventory, id) {
       return("This is a " + inventory[i].car_make + inventory[i].car_model);
   }
 }
-
+}
 /**
  * ### Challenge `sortCarInventory`
  * 
@@ -197,9 +197,20 @@ function getCarInfoById(inventory, id) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(arr) {
-  arr.sort();
+  var carmod = [];
+  for(let i=0;i<arr.length; i++) {
+      carmod[i] = arr[i].car_model;
+  }
+
+  carmod.sort();
+
+  for(let i=0;i<arr.length; i++) {
+    arr[i].car_model = carmod[i];
+  }
   return(arr);
+
 }
+// console.log(sortCarInventory());
 
 /**
  * ### Challenge `getModelYears`
