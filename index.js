@@ -124,12 +124,12 @@ var inventory = [
   *
   * NOTE: This example has been completed for you.
 **/
-function get3rdCar(inventory) {
-  const the3rd = inventory.find((item, index) => {
-    return index === 2 ;// we use 2 because index is zero-based.
-  });
-  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`;
-}
+// function get3rdCar(inventory) {
+//   const the3rd = inventory.find((item, index) => {
+//     return index === 2 ;// we use 2 because index is zero-based.
+//   });
+//   return `The car is a ${the3rd.car_make} ${the3rd.car_model}`;
+// }
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
