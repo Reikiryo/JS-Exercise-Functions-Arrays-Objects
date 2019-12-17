@@ -241,12 +241,13 @@ function getModelYears(arr) {
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(arr, max) {
-  let older = [];
-  for(let i=0;i<arr.length; i++) {
-    if (arr[i].car_year === max) {
-      older[i] = arr[i].car_year;
-    }
 
+  let older = [];
+
+  for(let i=0;i<arr.length; i++) {
+    if (arr[i].car_year <= max) {
+      older.push(arr[i]);
+    }
   }
   return(older);
 }
@@ -263,8 +264,15 @@ function getOlderCars(arr, max) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(arr) {
+  let make = ["Audi", "Mercedes-Benz", "Volkswagen", "BMW"];
+  let bake = [];
+  for(let i=0;i<arr.length; i++) {
+    if (arr[i].car_make === make[0] || arr[i].car_make === make[1] || arr[i].car_make ===	make[2] || arr[i].car_make === make[3]) {
+      bake.push(arr[i]);
+    }
+  }
+  return bake;
 }
 
 /**
@@ -277,6 +285,7 @@ function getGermanCars(/* code here */) {
  *   return a + b
  * }
  * 
+ * 
  * const addFive = function(num) {
 *    return num + 5
  * }
@@ -285,9 +294,9 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a ,b) => a + b; // code here!
+const addFive = (num) => num + 5; // code here!
+const argTimesTwo = (num) => num *2; // code here!
 
 /**
  * ### Challenge `carMaker`
